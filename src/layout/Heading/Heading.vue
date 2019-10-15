@@ -1,6 +1,6 @@
 <template>
   <el-menu
-    :default-active="activeIndex2"
+    :default-active="activeIndex"
     class="el-menu-demo"
     mode="horizontal"
     @select="handleSelect"
@@ -31,8 +31,7 @@
 export default {
   data() {
     return {
-      activeIndex: '1',
-      activeIndex2: '1',
+      activeIndex: this.$route.path,
       loginStatus: true
     };
   },
@@ -44,9 +43,13 @@ export default {
       } else {
         console.log("index is null")
       }
-
     }
   },
+  watch: {
+    $route() {
+      this.activeIndex = this.$route.path
+    }
+  }
 }
 </script>
 
@@ -60,7 +63,7 @@ body {
   height: $head-hight;
   line-height: $head-line-height;
   right: 0px;
-  
+
   .el-menu-item,
   .is-active,
   .el-submenu,
