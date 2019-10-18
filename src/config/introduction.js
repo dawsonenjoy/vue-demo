@@ -64,6 +64,15 @@ export default {
     <p>3.在组件当中通过{{参数|过滤器}}来调用</p>
     `
   },
+  testDirective: {
+    index: "指令使用测试",
+    content: `该页面就是简单的指令使用示例，其实现主要说明如下：
+    <p>1.使用了v-if和v-show指令，当为true时结果都是显示，为false时，右键检查可以看到v-if的节点直接消失，而v-show的只是设置了display="none"</p>
+    <p>2.使用v-for循环遍历数组，而在数组的字符串里存放html代码，通过v-html指令将其转成html代码显示</p>
+    <p>3.尝试了自定义指令，可以看到指令默认会获取元素的dom以及传递进来的数据，对于数据，比如：v-xxx:x.y.z="v"，那么x在传入数据对象的arg里，只能有1个，y和z都在对象的modifiers里，可以传入多个，值都为true，v在对象的value里，只能有1个</p>
+    <p>4.这里尝试了定义局部指令（在当前组件的directives属性下）和全局指令，在src/directives/index下，全局的需要在main.js中导入</p>
+    `
+  },
   testVuex: {
     index: "vuex测试",
     content: `
