@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import {Event} from '@/utils/component-pass'
 export default {
     props: ["fromChild"],
     // 设置可能从子组件接收到的值
@@ -20,6 +21,12 @@ export default {
                 // 向子组件发送一条信息，需要子组件通过监听FromParent事件接收
             })
         }
+    },
+    mounted(){
+      Event.$on('fromOther', function(data) {
+        // 挂载一个监听对象Event，监听任何组件使用该对象发送的fromOther事件
+        alert("I hear from a msg from other: " + data.msg)
+      })
     }
 }
 </script>
