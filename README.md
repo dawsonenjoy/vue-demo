@@ -26,4 +26,4 @@ npm run build --report
 ```
 
 ## 示例图
-![](https://upload-images.jianshu.io/upload_images/13183513-03d7f78f4d929c7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+![](./static/img/test.png)
