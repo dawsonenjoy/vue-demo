@@ -10,10 +10,11 @@
   >
     <el-menu-item index="/">主页</el-menu-item>
     <el-menu-item index="/testComponent">组件引入测试页</el-menu-item>
+    <el-menu-item index="/testStatic">静态资源测试页</el-menu-item>
+    <el-menu-item index="/testFilter">过滤器测试页</el-menu-item>
     <el-menu-item index="/testVuex">Vuex测试页</el-menu-item>
     <el-menu-item index="/testMock">Mock测试页</el-menu-item>
     <el-menu-item index="/testForm">表单缓存测试页</el-menu-item>
-    <el-menu-item index="/testStatic">静态资源测试页</el-menu-item>
 
     <el-submenu class="right" index v-if="loginStatus">
       <template slot="title">我的工作台</template>

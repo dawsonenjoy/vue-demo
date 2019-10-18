@@ -7,10 +7,11 @@ import Page404 from "@/views/Page404/Page404";
 
 // 测试页组件
 import TestComponent from "@/views/TestComponent/TestComponent";
+import TestFilter from "@/views/TestFilter/TestFilter";
+import TestStatic from "@/views/TestStatic/TestStatic";
 import TestVuex from "@/views/TestVuex/TestVuex";
 import TestMock from "@/views/TestMock/TestMock";
 import TestForm from "@/views/TestForm/TestForm";
-import TestStatic from "@/views/TestStatic/TestStatic";
 
 Vue.use(Router);
 
@@ -37,6 +38,11 @@ const router = new Router({
           path: "/testComponent",
           name: "TestComponent",
           component: TestComponent
+        },
+        {
+          path: "/testFilter",
+          name: "TestFilter",
+          component: TestFilter
         },
         {
           path: "/testVuex",
