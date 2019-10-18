@@ -54,8 +54,8 @@ export default {
 </script>
 
 <style lang="scss" scope>
-$head-hight: 80px !important;
-$head-line-height: 80px !important;
+$head-hight: 70px !important;
+$head-line-height: 70px !important;
 body {
   font-family: "Microsoft YaHei";
 }
@@ -70,7 +70,7 @@ body {
   .el-submenu .el-submenu__title {
     height: $head-hight;
     line-height: $head-line-height;
-    font-size: 20px;
+    font-size: 16px;
   }
   a {
     text-decoration: none;

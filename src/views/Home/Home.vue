@@ -14,6 +14,6 @@ export default {
 
 <style lang="scss" scope>
 p.intro {
-  font-size: 20px;
+  font-size: 16px;
 }
 </style>
