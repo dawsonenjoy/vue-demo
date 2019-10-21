@@ -1,7 +1,7 @@
 <template>
-  <div class="intro">
+  <div class="instr">
     <hr />
-    <el-button type="primary" @click="showIntro">页面实现说明</el-button>
+    <el-button type="primary" @click="showInstr">页面实现说明</el-button>
     <el-card shadow="always" v-show="isShow">
       <slot name="content"></slot>
     </el-card>
@@ -17,7 +17,7 @@ export default {
     }
   },
   methods: {
-    showIntro() {
+    showInstr() {
       this.isShow = !this.isShow
     }
   },
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.intro {
+.instr {
   .el-button {
     margin-bottom: 20px;
   }

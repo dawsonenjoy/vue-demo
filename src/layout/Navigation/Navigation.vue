@@ -17,7 +17,7 @@
           <el-menu-item index="/login">选项1</el-menu-item>
           <el-menu-item index="/sign">选项2</el-menu-item>
         </el-menu-item-group>
-          <el-menu-item index="/introduction">选项3</el-menu-item>
+          <el-menu-item index="/instruction">选项3</el-menu-item>
         <el-submenu index="">
           <span slot="title">选项4</span>
           <el-menu-item index="setting">选项1</el-menu-item>

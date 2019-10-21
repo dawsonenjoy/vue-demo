@@ -19,9 +19,9 @@
           </keep-alive>
           <router-view :key="key" v-if="!$route.meta.keepAlive" />
         </div>
-        <Introduction>
+        <Instruction>
           <div slot="content" v-html="content"></div>
-        </Introduction>
+        </Instruction>
       </el-col>
     </el-row>
   </div>
@@ -31,14 +31,14 @@
 import Heading from '@/layout/Heading/Heading'
 import Navigation from '@/layout/Navigation/Navigation'
 import Title from '@/layout/Title/Title'
-import Introduction from '@/layout/Introduction/Introduction'
-import introduction from '@/config/introduction'
+import Instruction from '@/layout/Instruction/Instruction'
+import instruction from '@/config/instruction'
 import { routeWatch } from '@/utils/route-utils'
 export default {
   data() {
-    return routeWatch(this.$route, introduction) || {
-      content: introduction["none"]["content"],
-      index: introduction["none"]["index"]
+    return routeWatch(this.$route, instruction) || {
+      content: instruction["none"]["content"],
+      index: instruction["none"]["index"]
     }
   },
   computed: {
@@ -48,9 +48,9 @@ export default {
   },
   watch: {
     $route() {
-      let { content, index } = routeWatch(this.$route, introduction) || {
-      content: introduction["none"]["content"],
-      index: introduction["none"]["index"]
+      let { content, index } = routeWatch(this.$route, instruction) || {
+      content: instruction["none"]["content"],
+      index: instruction["none"]["index"]
     }
       this.content = content
       this.index = index
@@ -59,7 +59,7 @@ export default {
   components: {
     Heading,
     Navigation,
-    Introduction,
+    Instruction,
     Title
   },
 }

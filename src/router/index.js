@@ -7,6 +7,7 @@ import Page404 from "@/views/Page404/Page404";
 
 // 测试页组件
 import TestComponent from "@/views/TestComponent/TestComponent";
+import TestConnect from "@/views/TestConnect/TestConnect";
 import TestStatic from "@/views/TestStatic/TestStatic";
 import TestFilter from "@/views/TestFilter/TestFilter";
 import TestDirective from "@/views/TestDirective/TestDirective";
@@ -40,6 +41,11 @@ const router = new Router({
           path: "/testComponent",
           name: "TestComponent",
           component: TestComponent
+        },
+        {
+          path: "/testConnect",
+          name: "TestConnect",
+          component: TestConnect
         },
         {
           path: "/testFilter",

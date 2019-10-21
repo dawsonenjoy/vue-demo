@@ -10,7 +10,7 @@
 import {Event} from '@/utils/component-pass'
 export default {
     props: ["fromChild"],
-    // 设置可能从子组件接收到的值
+    // 设置可能从子组件（@/view/TestConnect/TestConnect）接收到的值
     methods:{
         showFromChild(){
             alert(this.fromChild)
@@ -18,14 +18,15 @@ export default {
         sendToChild(){
             this.$emit("fromParent", {
                 "msg": "this is a msg from parent."
-                // 向子组件发送一条信息，需要子组件通过监听FromParent事件接收
+                // 向子组件发送一条信息，需要子组件（@/view/TestConnect/TestConnect）通过监听FromParent事件接收
             })
         }
     },
     mounted(){
       Event.$on('fromOther', function(data) {
-        // 挂载一个监听对象Event，监听任何组件使用该对象发送的fromOther事件
-        alert("I hear from a msg from other: " + data.msg)
+        // 挂载一个监听对象Event，监听任何组件使用该对象发送的fromOther事件（这里./TestConnect2监听了该事件）
+        let msg = "I hear from a msg from other: " + data.msg
+        alert(msg)
       })
     }
 }
