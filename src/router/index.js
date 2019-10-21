@@ -99,7 +99,7 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
 // 路由钩子，每次路由跳转前执行
-  console.log("to:" + to.path);
+  // console.log("to:" + to.path);
   next();
 });
 

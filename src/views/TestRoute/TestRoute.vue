@@ -32,6 +32,7 @@ export default {
         }
     },
     props: ["name"],
+    // 获取路由传来的name参数
     mounted(){
         this.$refs.get.style.background = this.$route.query.color
         this.randomName = Math.random().toString(36).slice(-8)

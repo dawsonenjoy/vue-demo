@@ -8,6 +8,7 @@ import getters from './getters'
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
+    // 引入所有配置
     state,
     mutations,
     actions,

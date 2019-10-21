@@ -16,15 +16,17 @@
 
 <script>
 import { mapState, mapMutations, mapActions, mapGetters } from 'vuex'
+// 引入mapState等vuex当中的内容方法来获取对应的属性
 export default {
   computed: {
     ...mapState(["count"])
+    // mapState(["count"])获取的是count值的返回函数，将其解构放入computed属性当中
   },
   methods: {
     ...mapMutations(["ADD", "SUB"]),
     ...mapActions(["add2"]),
     ...mapGetters(["getCount"])
-  }
+  },
 }
 </script>
 

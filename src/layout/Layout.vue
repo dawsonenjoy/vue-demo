@@ -39,6 +39,7 @@ export default {
     return routeWatch(this.$route, instruction) || {
       content: instruction["none"]["content"],
       index: instruction["none"]["index"]
+      // 获取对应页面的说明内容
     }
   },
   computed: {
@@ -48,6 +49,7 @@ export default {
   },
   watch: {
     $route() {
+      // 路由变化时更新对应页面的说明内容
       let { content, index } = routeWatch(this.$route, instruction) || {
       content: instruction["none"]["content"],
       index: instruction["none"]["index"]

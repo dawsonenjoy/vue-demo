@@ -52,6 +52,7 @@ export default {
   watch: {
     $route() {
       this.activeIndex = this.$route.path
+      // 监听路由变化时，heading的选中项也随之改变
     }
   }
 }

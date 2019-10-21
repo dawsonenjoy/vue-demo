@@ -65,6 +65,7 @@ export default {
     }
   },
   async mounted() {
+    // 异步获取数据，通过async和await实现同步等待
     let res = await Test.getTest()
     this.tableData = res.data.list
     this.isEdit = new Array(this.tableData.length).fill(false)

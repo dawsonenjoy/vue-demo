@@ -2,6 +2,7 @@ import axios from "axios";
 import Config from "@/config/index";
 
 const config = {
+  // api请求基本配置
   baseURL: Config.baseUrl,
   timeout: 5 * 1000,
   crossDomain: true,

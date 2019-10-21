@@ -14,16 +14,19 @@ export default {
   data() {
     return {
       isShow: false
+      // 默认不显示说明
     }
   },
   methods: {
     showInstr() {
       this.isShow = !this.isShow
+      // 点击按钮显示说明
     }
   },
   watch: {
     $route() {
       this.isShow = false
+      // 图片跳转时关闭说明
     }
   }
 }

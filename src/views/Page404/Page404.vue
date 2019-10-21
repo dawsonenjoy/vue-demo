@@ -6,11 +6,7 @@
 </template>
 
 <script>
-import Home from '@/views/Home/Home'
 export default {
-  components: {
-    Home
-  },
   methods: {
       jump() {
           this.$router.replace('/')

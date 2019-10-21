@@ -1,4 +1,5 @@
 import Mock from "mockjs";
+// 模拟数据生成
 Mock.mock("/user", {
   user: "dawsonenjoy"
 });
