@@ -13,6 +13,7 @@
     <el-menu-item index="/testStatic">静态资源测试页</el-menu-item>
     <el-menu-item index="/testFilter">过滤器测试页</el-menu-item>
     <el-menu-item index="/testDirective">指令测试页</el-menu-item>
+    <el-menu-item index="/testRoute/dawsonenjoy/?color=white">路由测试页</el-menu-item>
     <el-menu-item index="/testVuex">Vuex测试页</el-menu-item>
     <el-menu-item index="/testMock">Mock测试页</el-menu-item>
     <el-menu-item index="/testForm">表单缓存测试页</el-menu-item>

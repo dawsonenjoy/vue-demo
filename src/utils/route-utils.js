@@ -5,11 +5,15 @@ export function routeWatch(route, introduction) {
   let index = introduction["defaultIntro"]["index"];
   if (path.length > 0) {
     let intro = path.pop();
-    try{
+    if (path.includes("testRoute")) {
+      // 对于testRoute页面，则应该对倒二个路由进行判断
+      intro = path.pop();
+    }
+    try {
       content = introduction[intro]["content"];
       index = introduction[intro]["index"];
-    }catch(e){
-      return null
+    } catch (e) {
+      return null;
     }
   }
   return {
