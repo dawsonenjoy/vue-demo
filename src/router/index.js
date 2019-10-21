@@ -10,6 +10,7 @@ import TestComponent from "@/views/TestComponent/TestComponent";
 import TestStatic from "@/views/TestStatic/TestStatic";
 import TestFilter from "@/views/TestFilter/TestFilter";
 import TestDirective from "@/views/TestDirective/TestDirective";
+import TestRoute from "@/views/TestRoute/TestRoute";
 import TestVuex from "@/views/TestVuex/TestVuex";
 import TestMock from "@/views/TestMock/TestMock";
 import TestForm from "@/views/TestForm/TestForm";
@@ -49,6 +50,13 @@ const router = new Router({
           path: "/testDirective",
           name: "TestDirective",
           component: TestDirective
+        },
+        {
+          path: "/testRoute/:name",
+          name: "TestRoute",
+          component: TestRoute,
+          props: true
+          // 允许通过路由传递属性
         },
         {
           path: "/testVuex",
