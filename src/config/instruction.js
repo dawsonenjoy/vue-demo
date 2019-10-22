@@ -50,7 +50,7 @@ export default {
     content: `该页面就是基本的组件使用示例，其实现主要说明如下：
     <p>1.引入组件：通过import引入组件后，在components属性当中添加该组件，即可在template里直接使用</p>
     <p>2.data属性：在data属性当中可以定义组件使用的数据，在template中直接使用{{数据名}}来获取数据</p>
-    <p>3.属性绑定data：通过v-bind指令实现（v-bind可以简写成":"）</p>
+    <p>3.属性绑定data：通过v-bind指令实现绑定属性值（v-bind可以简写成":"），其中可以通过[data]绑定属性名，例如：:[attr]="value"，那么attr和value的值都和data里的绑定</p>
     <p>4.在别的属性里（比如methods）要使用data里的数据，一般要通过this.来引用</p>
     <p>5.组件化开发里data不应该直接设置一个属性对象，具体原因可以查看这里：<a href="https://www.cnblogs.com/wangjiachen666/p/9876266.html" target="_blank">链接</a></a></p>
     <p>6.methods属性：在methods属性里可以定义一些事件方法，而在template当中可以通过一些事件来绑定这些方法，而绑定事件通过v-on指令实现（v-on可以简写成"@"）</p>

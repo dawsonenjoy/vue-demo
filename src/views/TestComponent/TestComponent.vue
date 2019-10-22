@@ -19,7 +19,7 @@
     <div class="method">
       <h3>method属性示例：</h3>
       <div>
-        <el-select v-model="value" placeholder="请选择触发事件">
+        <el-select v-model="value" placeholder="请选择触发事件" @change=handleChange>
           <el-option
             v-for="item in options"
             :key="item.value"
@@ -27,11 +27,8 @@
             :value="item.value"
           ></el-option>
         </el-select>
-        <button v-if="value == 'click'" @click=handleEvent>鼠标点击事件触发按钮</button>
-        <!-- 通过@click绑定点击事件和对应触发的函数 -->
-        <button v-if="value == 'dblclick'" @dblclick=handleEvent>鼠标双击事件触发按钮</button>
-        <button v-if="value == 'mouseenter'" @mouseenter=handleEvent>鼠标进入事件触发按钮</button>
-        <button v-if="value == 'keydown'" @keydown.enter=handleEvent>按下回车键触发按钮</button>
+        <button @[value]=handleEvent>{{label}}</button>
+        <!-- 通过@[value]绑定事件名，并绑定事件触发的函数 -->
       </div>
     </div>
   </div>
@@ -62,13 +59,18 @@ export default {
           value: 'keydown',
           label: '按下回车键触发'
         }],
-        value: 'click'
+        value: 'click',
+        label: '点击触发'
       }
   },
   methods: {
     handleEvent(){
       alert("你触发了：" + this.value + " 事件")
       // 通过this.value获取data里的value值
+    },
+    handleChange(val) {
+      this.label = this.options.find(item=>item.value == val).label
+      // 更新按钮的对应文本
     }
   }
 }
