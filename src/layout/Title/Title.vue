@@ -21,8 +21,7 @@ export default {
   font-size: 16px;
 }
 .split {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 20px 20px 0px;
   background: #f8f6f8;
   height: 50px;
 }
