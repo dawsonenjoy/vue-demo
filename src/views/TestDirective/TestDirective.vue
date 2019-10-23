@@ -51,7 +51,7 @@ export default {
 $types: if for diy;
 @each $type in $types {
   .directive-#{$type} {
-    margin: 10px 0px 10px 0px;
+    margin: 10px 20px 10px 0px;
     padding: 10px;
     font-size: 20px;
     div {

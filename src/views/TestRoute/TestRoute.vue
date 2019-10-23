@@ -64,7 +64,7 @@ export default {
 $types: params props get hook;
 @each $type in $types {
   .route-#{$type} {
-    margin: 10px 0px 10px 0px;
+    margin: 10px 20px 10px 0px;
     padding: 10px;
     font-size: 20px;
     div {
